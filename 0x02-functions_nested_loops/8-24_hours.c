@@ -3,9 +3,11 @@
 
 
 /**
- * jack_bauer - Print every minute of the day from 0:00 to 23:59
+ * jack_bauer - Print every minute of the day of jack Bauer
  *
- * Return: void
+ * Starting from 00:00 to 23:59
+ *
+ * Return: Nothing
  */
 
 

@@ -3,48 +3,37 @@
 
 
 /**
- * print_sign - Print the sign of a number
+ * print_last_digit - Prints the last digit of a number
  *
- * @n: Number
+ * @n: A number
  *
- * Return: 1 (is greater that zero) OR 0 (is zero)
- * OR -1 (is less that zero)
+ * Return: Last digit of n
  */
 
 
 
-int print_sign(int n)
+int print_last_digit(int n)
 
 {
 
-	if (n > 0)
+	int last_digit;
 
-	{
 
-		_putchar(43);
 
-		return (1);
+	if (n < 0)
 
-	}
-
-	else if (n == 0)
-
-	{
-
-		_putchar(48);
-
-		return (0);
-
-	}
+		last_digit = (n % 10) * -1;
 
 	else
 
-	{
+		last_digit = n % 10;
 
-		_putchar(45);
 
-		return (-1);
 
-	}
+	_putchar(last_digit + '0');
+
+
+
+	return (last_digit);
 
 }
