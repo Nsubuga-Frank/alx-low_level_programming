@@ -3,13 +3,9 @@
 
 
 /**
-
  * main - alphabet in lowercase, followed by a new line.
-
  *
-
  * Always return(0)
-
  */
 
 

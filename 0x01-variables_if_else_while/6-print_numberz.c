@@ -2,27 +2,25 @@
 
 
 
+/**
+ * main -Entry point
+ *
+ * Return: ALways 0 (success)
+ */
+
 int main(void)
 
 {
 
-	int n = 48;
+	int num;
 
 
 
-	while (n < 58)
+	for (num = 0; num < 10; num++)
 
-	{
+		putchar(num + '0');
 
-		putchar(n);
-
-		n++;
-
-	}
-
-	putchar ('\n');
-
-
+	putchar('\n');
 
 	return (0);
 

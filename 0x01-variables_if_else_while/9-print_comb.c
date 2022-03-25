@@ -3,46 +3,38 @@
 
 
 /**
-
- * main - Print single digit numbers in the formart
-
+ * main - Print all possible combinations of single digit numbers
  *
-
- * Description: Sepaeated by commas
-
- * Return: Always(0) Success
-
+ * Return: Always 0 (Success)
  */
-
-
 
 int main(void)
 
 {
 
-	int i;
+		int number;
 
 
 
-	for (i = 48; i < 58; i++)
+		for (number = 0; number <= 9; number++)
 
-	{
+		{
 
-		putchar(i);
+		putchar(number + '0');
 
-	}
+		if (number < 9)
 
-	if (i != 57)
-
-	{
+		{
 
 		putchar(',');
 
 		putchar(' ');
 
-	}
+		}
 
-	putchar('\n');
+		}
+
+		putchar('\n');
 
 
 

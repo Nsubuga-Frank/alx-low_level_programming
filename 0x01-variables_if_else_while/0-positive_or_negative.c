@@ -1,30 +1,26 @@
-#include <stdio.h>
-
 #include <stdlib.h>
 
 #include <time.h>
 
+#include <stdio.h>
+
+/* more headers goes there */
+
 
 
 /**
-
- * main - finds the last int in a random number
-
+ * main - Entry point
  *
-
- * Description: The numbers are generated automatically
-
- * Return: Always(0) Success
-
+ * Description - Prints if random generated number is +tive, zero or -tive
+ *
+ * Return: Always 0 (Success)
  */
-
-
 
 int main(void)
 
 {
 
-	int n, last_digit;
+	int n;
 
 
 
@@ -32,33 +28,17 @@ int main(void)
 
 	n = rand() - RAND_MAX / 2;
 
-	last_digit = n % 10;
+	if (n < 0)
 
-	printf("Last digit of %d is %d and is ", n, last_digit);
+		printf("%d is negative\n", n);
 
-	if (last_digit > 5)
+	else if (n == 0)
 
-	{
+		printf("%d is zero\n", n);
 
-		printf("grater than 5\n");
+	else
 
-	}
-
-	else if (last_digit  == 0)
-
-	{
-
-		printf("0\n");
-
-	}
-
-	else if (last_digit < 6 && last_digit != 0)
-
-	{
-
-		printf("less than 6 and not 0\n");
-
-	}
+		printf("%d is positive\n", n);
 
 	return (0);
 
