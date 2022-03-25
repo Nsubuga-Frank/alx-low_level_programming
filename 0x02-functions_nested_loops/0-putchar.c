@@ -3,34 +3,34 @@
 
 
 /**
- * main - Print "_putchar"
- *
- * Return: Always 0 (Success)
- */
-
-
+  * main - Entry point
+  *
+  * Return: Always 0
+  */
 
 int main(void)
 
 {
 
-	int i = 0;
+	_putchar('_');
 
-	char name[] = "_putchar";
+	_putchar('p');
 
+	_putchar('u');
 
+	_putchar('t');
 
-	while (i < 9)
+	_putchar('c');
 
-	{
+	_putchar('h');
 
-		_putchar(name[i]);
+	_putchar('a');
 
-		i++;
-
-	}
+	_putchar('r');
 
 	_putchar('\n');
+
+
 
 	return (0);
 
