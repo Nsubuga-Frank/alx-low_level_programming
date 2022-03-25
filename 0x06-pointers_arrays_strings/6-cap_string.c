@@ -3,15 +3,10 @@
 
 
 /**
-
 *cap_string -function that capitalizes all words in a string
-
 *
-
 *@s: character to be checked
-
 *Return: changed string
-
 */
 
 
