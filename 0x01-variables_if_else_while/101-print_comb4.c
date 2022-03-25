@@ -2,6 +2,7 @@
 
 /**
  * main - program that prints all possible different combinations
+ *
  * Return: Always (Success)
  */
 
