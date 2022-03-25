@@ -4,7 +4,10 @@
 
 /**
  * main - alphabet in lowercase, followed by a new line.
- * Always return(0)
+ *
+ * You can only use the put char
+ *
+ * Return(0)
  */
 
 
