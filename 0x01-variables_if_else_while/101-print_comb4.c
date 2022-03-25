@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible different combinations
+ * main - prints 3 combination of numbers
  *
  * Return: Always (Success)
  */
