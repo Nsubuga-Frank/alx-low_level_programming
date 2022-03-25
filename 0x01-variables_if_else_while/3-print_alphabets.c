@@ -3,8 +3,7 @@
 
 
 /**
- * main - alphabet in lowercase, followed by a new lin
- * 
+ * main - alphabet in lowercase, followed by a new line
  * Return: Always (Success)
  */
 
