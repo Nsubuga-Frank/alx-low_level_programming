@@ -1,124 +1,98 @@
+#include "main.h"
+
 /**
- * infinite_add - Add up two numbers stored in given char arrays
+ * infinite_add -  adds two numbers
  *
- * @n1: The first number
+ * @n1: first number
  *
- * @n2: The second number
+ * @n2: second number
  *
- * @r: Pointer to the buffer to store result
+ * @r: result
  *
- * @size_r: The size of the buffer
+ * @size_r: result lenght
  *
- * Return: 0 if buffer too small to store result, else return pointer to buffer
+ * Return: sum
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
+
+
 {
 
-	int l1, l2, tmpl, rl, i, sum, num1, num2, carry;
+	/* local variable declaration */
 
-	char tmp[10000];
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
 
 
-	rl = i = l1 = l2 = sum = num1 = num2 = carry = 0;
+	while (n1[i] != '\0')
 
-	while (n1[l1] != '\0')
+		i++;
 
-		l1++;
+	while (n2[j] != '\0')
 
-	while (n2[l2] != '\0')
+		j++;
 
-		l2++;
+	if (i > j)
 
-	if (l1 + 2 > size_r || l2 + 2 > size_r)
+		l = i;
+
+	else
+
+		l = j;
+
+	if (l + 1 > size_r)
 
 		return (0);
 
-	l1--;
+	r[l] = '\0';
 
-	l2--;
-
-	while (i <= l1 || i <= l2)
+	for (k = l - 1 ; k >= 0 ; k--)
 
 	{
 
-		num1 = num2 = 0;
+		i--;
 
-		if (i <= l1)
+		j--;
 
-			num1 = n1[l1 - i] - '0';
+		if (i >= 0)
 
-		if (i <= l2 && (l2 - i) >= 0)
-
-			num2 = n2[l2 - i] - '0';
-
-		sum = num1 + num2 + carry;
-
-		if (sum >= 10)
-
-		{
-
-			carry = 1;
-
-			sum -= 10;
-
-		}
+			f = n1[i] - '0';
 
 		else
 
-			carry = 0;
+			f = 0;
 
-		r[i] = sum + '0';
+		if (j >= 0)
 
-		i++;
+			s = n2[j] - '0';
 
-		rl++;
+		else
 
-	}
+			s = 0;
 
-	if (carry > 0)
+		r[k] = (f + s + d) % 10 + '0';
 
-	{
-
-		r[i] = carry + '0';
-
-		r[i + 1] = '\0';
+		d = (f + s + d) / 10;
 
 	}
 
-	i = tmpl = 0;
-
-	while (i <= rl)
+	if (d == 1)
 
 	{
 
-		tmp[i] = r[rl - i];
+		r[l + 1] = '\0';
 
-		tmpl++;
+		if (l + 2 > size_r)
 
-		i++;
+			return (0);
 
-	}
+		while (l-- >= 0)
 
-	i = 0;
+			r[l + 1] = r[l];
 
-	while (i < tmpl)
-
-	{
-
-		if (r[i] == '\0')
-
-		{
-
-			break;
-
-		}
-
-		r[i] = tmp[i];
-
-		i++;
+		r[0] = d + '0';
 
 	}
 
