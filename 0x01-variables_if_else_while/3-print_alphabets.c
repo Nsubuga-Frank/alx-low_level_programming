@@ -3,11 +3,9 @@
 
 
 /**
- * main - alphabet in lowercase, followed by a new line.
- *
- * You can only use the put char
- *
- * Return(0)
+ * main - alphabet in lowercase, followed by a new lin
+ * 
+ * Return: Always (Success)
  */
 
 
