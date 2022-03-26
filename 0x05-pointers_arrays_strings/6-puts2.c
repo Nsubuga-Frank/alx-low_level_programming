@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 
 
@@ -8,6 +8,7 @@
  * @str: Input string
  *
  * Return: void
+ *
  */
 
 
@@ -20,7 +21,7 @@ void puts2(char *str)
 
 
 
-	while {str[i] != '\n')
+	while (str[i] != '\0')
 
 	{
 
